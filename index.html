@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder With Javascript</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Gemunu+Libre&family=Noto+Sans+Display&family=Nunito&family=Open+Sans&family=Oswald&family=Poppins&family=Raleway&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&family=Ubuntu&family=Yaldevi&display=swap" rel="stylesheet">
+    <!-- Font Awesome For Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <!-- <link rel="stylesheet" href="./plugins/pick-a-color-1.1.5.min.css"> -->
+    <!-- Custome Css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Make Your Resume Easily</h1>
+    </header>
+    <main>
+        <aside>
+            <form>
+                <!-- Aside Name Style Section -->
+                <div class="inputs name-div">
+                    <a class="toggleNameStyleDiv" href="javascript:void(0)">
+                        Style Name Text<i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="nameStyleBox">
+                        <label for="">Text Color</label>
+                        <select onchange="getNameTextColor(this.value);">
+                            <option value="0">Choose Color</option>
+                            <option value="white">White</option>
+                            <option value="black">Black</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="green">Green</option>
+                        </select>
+                        <br>
+                        <label for="">Choose Font Family</label>
+                            <select onchange="getNameFontFamily(this.value);">
+                                <option value="0">Choose Font Family</option>
+                                <option value="Birthstone">Birthstone</option>
+                                <option value="Noto Sans Display">Noto Sans Display</option>
+                                <option value="Nunito">Nunito</option>
+                                <option value="Open Sans">Open Sans</option>
+                                <option value="Oswald">Oswald</option>
+                                <option value="Poppins">Poppins</option>
+                                <option value="Raleway">Raleway</option>
+                                <option value="Roboto">Roboto</option>
+                                <option value="Roboto Mono">Roboto Mono</option>
+                                <option value="Roboto Slab">Roboto Slab</option>
+                                <option value="Ubuntu">Ubuntu</option>
+                                <option value="Yaldevi">Yaldevi</option>
+                            </select>
+                            <br>
+                            <label for="">Font Size</label>
+                    <select onchange="getNameFontSize(this.value)">
+                            <option value="0">Choose Font Size</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                            <option value="12">12</option>
+                            <option value="14">14</option>
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="26">26</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                            <option value="38">38</option>
+                            <option value="40">40</option>
+                            <option value="42">42</option>
+                            <option value="44">44</option>
+                    </select>
+                    </div>
+                </div>
+                <!-- Aside Designation Style Section -->
+                <div class="inputs designation-div">
+                    <a class="toggleDesignationStyleDiv" href="javascript:void(0)">
+                        Style Designation Text <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="designationStyleBox">
+                        <label for="">Text Color</label>
+                        <select onchange="getDesignationTextColor(this.value);">
+                            <option value="0">Choose Color</option>
+                            <option value="white">White</option>
+                            <option value="black">Black</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="green">Green</option>
+                        </select>
+                        <br>
+                        <label for="">Choose Font Family</label>
+                            <select onchange="getDesignationFontFamily(this.value);">
+                                <option value="0">Choose Font Family</option>
+                                <option value="Birthstone">Birthstone</option>
+                                <option value="Noto Sans Display">Noto Sans Display</option>
+                                <option value="Nunito">Nunito</option>
+                                <option value="Open Sans">Open Sans</option>
+                                <option value="Oswald">Oswald</option>
+                                <option value="Poppins">Poppins</option>
+                                <option value="Raleway">Raleway</option>
+                                <option value="Roboto">Roboto</option>
+                                <option value="Roboto Mono">Roboto Mono</option>
+                                <option value="Roboto Slab">Roboto Slab</option>
+                                <option value="Ubuntu">Ubuntu</option>
+                                <option value="Yaldevi">Yaldevi</option>
+                            </select>
+                            <br>
+                            <label for="">Font Size</label>
+                    <select onchange="getDesignationFontSize(this.value)">
+                            <option value="0">Choose Font Size</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                            <option value="12">12</option>
+                            <option value="14">14</option>
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="26">26</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                            <option value="38">38</option>
+                            <option value="40">40</option>
+                            <option value="42">42</option>
+                            <option value="44">44</option>
+                    </select>
+                    </div>
+                </div>
+                <!-- Contact Style Section -->
+                <div class="inputs contacts-div">
+                    <a class="toggleContactStyleDiv" href="javascript:void(0)">
+                        Style Contact Text <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="contactStyleBox">
+                        <label for="">Text Color</label>
+                        <select onchange="getContactTextColor(this.value);">
+                            <option value="0">Choose Color</option>
+                            <option value="white">White</option>
+                            <option value="black">Black</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="green">Green</option>
+                        </select>
+                        <br>
+                        <label for="">Choose Font Family</label>
+                            <select onchange="getContactFontFamily(this.value);">
+                                <option value="0">Choose Font Family</option>
+                                <option value="Birthstone">Birthstone</option>
+                                <option value="Noto Sans Display">Noto Sans Display</option>
+                                <option value="Nunito">Nunito</option>
+                                <option value="Open Sans">Open Sans</option>
+                                <option value="Oswald">Oswald</option>
+                                <option value="Poppins">Poppins</option>
+                                <option value="Raleway">Raleway</option>
+                                <option value="Roboto">Roboto</option>
+                                <option value="Roboto Mono">Roboto Mono</option>
+                                <option value="Roboto Slab">Roboto Slab</option>
+                                <option value="Ubuntu">Ubuntu</option>
+                                <option value="Yaldevi">Yaldevi</option>
+                            </select>
+                            <br>
+                            <label for="">Font Size</label>
+                    <select onchange="getContactFontSize(this.value)">
+                            <option value="0">Choose Font Size</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                            <option value="12">12</option>
+                            <option value="14">14</option>
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="26">26</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                            <option value="38">38</option>
+                            <option value="40">40</option>
+                            <option value="42">42</option>
+                            <option value="44">44</option>
+                    </select>
+                    </div>
+                </div>
+                <!-- Heading Style Section -->
+                <div class="inputs heading-div">
+                    <a class="toggleHeadingStyleDiv" href="javascript:void(0)">
+                        Style Heading Text <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="headingStyleBox">
+                        <label for="">Text Color</label>
+                        <select onchange="getHeadingTextColor(this.value);">
+                            <option value="0">Choose Color</option>
+                            <option value="white">White</option>
+                            <option value="black">Black</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="green">Green</option>
+                        </select>
+                        <br>
+                        <label for="">Choose Font Family</label>
+                            <select onchange="getHeadingFontFamily(this.value);">
+                                <option value="0">Choose Font Family</option>
+                                <option value="Birthstone">Birthstone</option>
+                                <option value="Noto Sans Display">Noto Sans Display</option>
+                                <option value="Nunito">Nunito</option>
+                                <option value="Open Sans">Open Sans</option>
+                                <option value="Oswald">Oswald</option>
+                                <option value="Poppins">Poppins</option>
+                                <option value="Raleway">Raleway</option>
+                                <option value="Roboto">Roboto</option>
+                                <option value="Roboto Mono">Roboto Mono</option>
+                                <option value="Roboto Slab">Roboto Slab</option>
+                                <option value="Ubuntu">Ubuntu</option>
+                                <option value="Yaldevi">Yaldevi</option>
+                            </select>
+                            <br>
+                            <label for="">Font Size</label>
+                    <select onchange="getHeadingFontSize(this.value)">
+                            <option value="0">Choose Font Size</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                            <option value="12">12</option>
+                            <option value="14">14</option>
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="26">26</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                            <option value="38">38</option>
+                            <option value="40">40</option>
+                            <option value="42">42</option>
+                            <option value="44">44</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="inputs">
+                    <label for="">Choose Resume Background</label>
+                    <select onchange="getTemplateBg(this.value);">
+                        <option value="0">Choose Background Color</option>
+                        <option value="white">White</option>
+                        <option value="black">Black</option>
+                        <option value="red">Red</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="green">Green</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="">Choose List Style</label>
+                    <select onchange="getListyStyle(this.value);">
+                        <option value="0">Choose List Style</option>
+                        <option value="circle">Circle</option>
+                        <option value="square">Square</option>
+                        <option value="upper-roman">Upper-Roman</option>
+                        <option value="lower-alpha">Lower-Alpha</option>
+                        <option value="ol">Number</option>
+                    </select>
+                </div>
+            </form>
+        </aside>
+        <section>
+            <div class="cv">
+                <input type="text" class="name error-check" id="userName" placeholder="John Smith"><br>
+                <input type="text" class="designation error-check" id="userDesignation" placeholder="IT Project Manager">
+                <div class="contacts">
+                    <div>
+                        <p>
+                            <strong>Phone: </strong>
+                            <input type="text" id="phoneNumber" class="contactInfo error-check" placeholder="+8801933999657">
+                        </p>
+                        <p>
+                            <strong>Email: </strong>
+                            <input type="text" id="emailAddress" class="contactInfo error-check" placeholder="example@mail.com">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>Twitter: </strong>
+                            <input type="text" id="twitterUsername" class="contactInfo error-check" placeholder="@username">
+                        </p>
+                        <p>
+                            <strong>LinkedIn: </strong>
+                            <input type="text" id="linkedinUsername" class="contactInfo error-check" placeholder="@username">
+                        </p>
+                    </div>
+                    
+                </div>
+                <div class="bio">
+                   <textarea id="userBio" class="error-check" cols="30" rows="4" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eveniet corporis vel dolor provident quod. Magnam voluptate, ipsa temporibus amet aliquam quas ex laborum iste possimus, non sed repellendus corporis."></textarea>
+                </div>
+                <div id="experience">
+                    <h3 id="heading">Experience</h3>
+                        <div class="parent">
+                            <span><input type="text" id="experienceDate" placeholder="2000-01-20" class="error-check"></span>
+                            <div class="item">
+                                <input type="text" id="experienceDesignation" placeholder="Senior Project Manager" class="error-check">
+                                <p><input type="text" placeholder="Company Name" id="experienceCompanyName" class="error-check"></p>
+                                <ul id="listStyle">
+                                    <li><input type="text" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit." id="experienceItem" class="error-check"></li>
+                                    <li><input type="text" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit." id="experienceItem" class="error-check"></li>
+                                    <li><input type="text" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit." id="experienceItem" class="error-check"></li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                        <div class="parent">
+                            <span><input type="text" id="experienceDate" placeholder="2000-01-20" class="error-check"></span>
+                            <div class="item">
+                                <input type="text" id="experienceDesignation" placeholder="Senior Project Manager" class="error-check">
+                                <p><input type="text" placeholder="Company Name" id="experienceCompanyName" class="error-check"></p>
+                                <ul id="listStyle">
+                                    <li><input type="text" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit." id="experienceItem" class="error-check"></li>
+                                    <li><input type="text" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit." id="experienceItem" class="error-check"></li>
+                                    <li><input type="text" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit." id="experienceItem" class="error-check"></li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                </div>
+                
+                <div id="education">
+                    <h3 id="heading">Education</h3>
+                    <div class="parent">
+                        <span><input type="text" id="educationDate" placeholder="2000-01-20" class="error-check"></span>
+                        <div class="item">
+                            <input type="text" id="educationDesignation" placeholder="Dhaka University" class="error-check">
+                            <ul id="listStyle">
+                                <li><input type="text" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit." id="educationItem" class="error-check"></li>
+                                <li><input type="text" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit." id="educationItem" class="error-check"></li>
+                                <li><input type="text" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit." id="educationItem" class="error-check"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="skills">
+                    <h3 id="heading">Skills</h3>
+                    <div class="skill-item">
+                        <li><input type="text" placeholder="Communication" class="error-check"></li>
+                        <li><input type="text" placeholder="Driving" class="error-check"></li>
+                        <li><input type="text" placeholder="Swimming" class="error-check"></li>
+                    </div>
+                </div>
+            </div>
+            <div class="btns">
+                <button id="downloadBtn" class="btn-download">Download</button>
+            </div>
+            
+        </section>
+        
+    </main>
+   
+    <footer>
+
+    </footer>
+
+    <script src="./plugins/html2pdf.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

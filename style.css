@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primaryFontFamily: 'Poppins', sans-serif;
+    --secoundaryFontFamily: 'Open Sans', sans-serif; 
+}
+body{
+    background-color: #eee;
+    font-family: var(--primaryFontFamily);
+   
+}
+textarea{
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+input{
+    border: none;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent;
+}
+input:hover,
+textarea:hover{
+    background-color: #ddd;
+}
+label{
+    color: #ddd;
+}
+header{
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+}
+aside{
+    width: 20%;
+    background-color: #000;
+    padding: 10px;
+}
+aside .inputs input{
+    width: 90%;
+    background-color: #333;
+    border: none;
+    outline: none;
+
+}
+aside .inputs select{
+    width: 90%;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    outline: none;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+section{
+    width: 78%;
+    background-color: #fff;
+    padding: 20px;
+}
+.cv{
+    /* border: 1px solid #eee;
+    width: 95%;
+    margin: 0 auto;
+    
+    margin-bottom: 10px; */
+    padding: 10px;
+    line-height: 15px;
+}
+
+.contacts{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* padding-left: 5px; */
+}
+.contacts div{
+    width: 50%;
+}
+.contacts div p{
+    display: flex;
+    align-items: center;
+}
+.contacts div p input{
+    color: #000;
+    font-size: 14px;
+    font-family: var(--primaryFontFamily);
+}
+.contacts div p input::placeholder{
+    color: #000;
+    font-size: 14px;
+    font-family: var(--primaryFontFamily);
+}
+.contacts div p strong{
+    margin-top: -8px;
+    font-size: 12px;
+}
+.bio textarea{
+    color: #000;
+    font-family: var(--primaryFontFamily);
+    font-size: 14px;
+    /* padding: 10px; */
+}
+.bio textarea::placeholder{
+    color: #000;
+    font-family: var(--primaryFontFamily);
+    font-size: 14px;
+}
+#experience .parent,
+#education .parent{
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+}
+#experience .item,
+#education .item{
+    margin-left: 10px;
+    width: 95%;
+}
+#experienceDesignation,
+#educationDesignation{
+    font-size: 18px;
+    color: #000;
+    font-family: var(--primaryFontFamily);
+}
+#experienceDesignation::placeholder,
+#educationDesignation::placeholder{
+    font-size: 18px;
+    color: #000;
+    font-family: var(--primaryFontFamily);
+}
+#experienceCompanyName{
+    font-family: var(--primaryFontFamily);
+    font-size: 13px;
+    color: #000;
+    margin-top: -5px;
+}
+#experienceCompanyName::placeholder{
+    font-family: var(--primaryFontFamily);
+    font-size: 13px;
+    color: #000;
+}
+.item ul li input{
+    font-family: var(--primaryFontFamily);
+}
+.item ul li input::placeholder{
+    font-family: var(--primaryFontFamily);
+}
+.skill-item{
+    display: flex;
+    margin-top: 5px;
+}
+.skill-item li{
+    list-style: none;
+    margin: 0 16px;
+}
+.skill-item li:nth-child(1){
+    margin: 0 0;
+}
+.btns{
+    text-align: center;
+}
+.btn-download{
+    border: none;
+    outline: none;
+    background-color: crimson;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.name{
+    font-size: 28px;
+    color: #000;
+    font-family: var(--secoundaryFontFamily);
+    margin-left: -5px;
+}
+.name::placeholder{
+    font-size: 28px;
+    color: #000;
+    font-family: var(--secoundaryFontFamily);
+}
+.designation{
+    font-family: var(--primaryFontFamily);
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: -5px;
+}
+.designation::placeholder{
+    font-family: var(--primaryFontFamily);
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.name-div,
+.designation-div,
+.contacts-div,
+.heading-div{
+    margin-bottom: 20px;
+}
+.toggleNameStyleDiv,
+.toggleDesignationStyleDiv,
+.toggleContactStyleDiv,
+.toggleHeadingStyleDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    background-color: #222;
+    font-size: 18px;
+}
+.toggleNameStyleDiv i,
+.toggleDesignationStyleDiv i,
+.toggleContactStyleDiv i,
+.toggleHeadingStyleDiv i{
+    font-size: 13px;
+}
+.nameStyleBox,
+.designationStyleBox,
+.contactStyleBox,
+.headingStyleBox{
+    display: none;
+    background-color: #444;
+    padding: 5px;
+}
+
+/* @media print{
+    aside{
+        display: none;
+    }
+    header{
+        margin-bottom: 0;
+    }
+    header h1{
+        display: none;
+    }
+    section{
+        width: 100%;
+        padding: 5px;
+    }
+    .cv{
+        border: none;
+        width: 100%;
+        padding: 0;
+        -webkit-print-color-adjust: exact;
+    }
+} */
